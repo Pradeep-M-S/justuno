@@ -1,12 +1,21 @@
-import Lottie from 'react-lottie'
-import animationData from "../assets/lottie-1.json";
+import { useEffect, useRef } from 'react';
+import lottie from 'lottie-web';
 
 const Hero = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-  };
+  const container = useRef(null);
+
+  useEffect(() => {
+    if(!container.current.firstChild) {
+      lottie.loadAnimation({
+        container: container.current, // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        animationData: require("../assets/lottie-1.json"), // the path to the animation json
+      });
+    }
+  },[]);
+
 
   return (
       <div className="min-h-max w-full text-white grid grid-flow-row my-8 md:my-0  md:grid-flow-col md:grid-cols-2">
@@ -51,11 +60,7 @@ const Hero = () => {
             </span> with one of our CRO experts
           </div>
         </div>
-        <div className='p-5'>
-          <Lottie 
-            options={defaultOptions} 
-          />
-        </div>
+        <div className='p-5 max-h-screen' ref={container}></div>
       </div>
   )
 };
