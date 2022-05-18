@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.company-usage-container {
+  @apply grid grid-flow-row py-20 justify-center md:justify-around gap-20 md:gap-0 md:grid-flow-col min-w-full min-h-max bg-white md:px-16 md:py-24;
+}
+
+.company-usage-container img {
+  @apply mx-auto;
+}
