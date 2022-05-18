@@ -44,3 +44,9 @@
 .company-usage-container img {
   @apply mx-auto;
 }
+
+.header-container {
+  @apply fixed top-0 left-0 right-0 max-w-full mx-auto px-4 sm:px-6;
+  background: #172327;
+  z-index: 100000000;
+}

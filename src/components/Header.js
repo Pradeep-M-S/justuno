@@ -82,7 +82,7 @@ function classNames(...classes) {
 export default function Header() {
   return (
       <Popover className="relative">
-        <div className="max-w-full mx-auto px-4 sm:px-6">
+        <div className="header-container">
           <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start">
               <a href="#">

@@ -18,7 +18,7 @@ const Hero = () => {
 
 
   return (
-      <div className="min-h-max w-full text-white grid grid-flow-row my-8 md:my-0  md:grid-flow-col md:grid-cols-2">
+      <div className="min-h-max w-full text-white grid grid-flow-row my-8 md:my-24  md:grid-flow-col md:grid-cols-2">
         <div className='flex px-5 flex-col gap-5 align-center justify-center md:px-8 text-left md:w-4/5 mx-auto'>
           <div>
             <div className='text-5xl sm:text-6xl font-extrabold'>
